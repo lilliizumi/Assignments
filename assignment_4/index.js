@@ -4,47 +4,82 @@ $(document).ready(function(){
 
 	$("p").hide();
 	$(".read-less").hide();
-	$("#first-read-more-button").click(slideDownFirst);
-	$("#first-read-more-button").click(hideFirst);
-	$("#first-read-more-button").click(showFirst);	
+	$("#first-read-more-button").click(firstReadMore);
+	$("#first-read-more-button").click(firstReadMore);
+	$("#first-read-more-button").click(firstReadMore);
 	$("#first-read-less-button").click(slideUpFirst);
-	$("#second-read-more-button").click(slideDownSecond);
-	$("#second-read-more-button").click(hideSecond);
-	$("#second-read-more-button").click(showSecond);
+	$("#first-read-less-button").click(hideFirstRL);
+	$("#first-read-less-button").click(showFirstRM);
+	$("#second-read-more-button").click(secondReadMore);
+	$("#second-read-more-button").click(secondReadMore);
+	$("#second-read-more-button").click(secondReadMore);
+	$("#second-read-less-button").click(hideSecondRL);
+	$("#second-read-less-button").click(showSecondRM);
+	$("#second-read-less-button").click(showSecondRL);
 	$("#second-read-less-button").click(slideUpSecond);
 
 
-	function slideDownFirst(){
+	// function slideDownFirst(){
+	// 	event.preventDefault();
+	// 	$("#first-read-more-text").slideDown();
+	// }
+
+	// function hideFirst(){
+	// 	event.preventDefault();
+	// 	$("#first-read-more-button").hide();
+	// }
+
+	// function showFirst(){
+	// 	event.preventDefault();
+	// 	$("#first-read-less-button").show();
+	// }
+
+	function firstReadMore(){
 		event.preventDefault();
 		$("#first-read-more-text").slideDown();
-	}
-
-	function hideFirst(){
-		event.preventDefault();
 		$("#first-read-more-button").hide();
+		$("#first-read-less-button").show();
+
 	}
 
-	function showFirst(){
-		event.preventDefault();
-		$("#first-read-less-button").show();
+	function hideFirstRL(){
+		$("#first-read-less-button").slideUp();
 	}
+
+	function showFirstRM(){
+		$("#first-read-more-button").show();
+	}
+
 
 	function slideUpFirst(){
 		event.preventDefault();
 		$("#first-read-more-text").slideUp();
+
 	}
 
-	function slideDownSecond(){
+	function secondReadMore(){
 		event.preventDefault();
 		$("#second-read-more-text").slideDown();
-	}
-
-	function hideSecond(){
-		event.preventDefault();
 		$("#second-read-more-button").hide();
+		$("#second-read-less-button").show();
 	}
 
-	function showSecond(){
+	function slideUpSecond(){
+		event.preventDefault();
+		$("#second-read-more-text").slideUp();
+	}
+
+	function hideSecondRL(){
+		event.preventDefault();
+		$("#second-read-less-button").slideUp();
+	}
+
+	function showSecondRM(){
+		event.preventDefault();
+		$("#second-read-more-button").show();
+	}
+
+	function showSecondRL(){
 		event.preventDefault();
 		$("#second-read-less-button").show();
 	}

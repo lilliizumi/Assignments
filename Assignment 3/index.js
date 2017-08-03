@@ -1,8 +1,10 @@
 alert ("Hello!")
 
-document.getElementById('categories').onmouseover = switchBlue;
+document.getElementsByTagName('a').onmouseover = switchBlue;
 
 function switchBlue() {
+
+	console.log("THIS", this)
   document.body.style.color = 'blue';
 }
 
