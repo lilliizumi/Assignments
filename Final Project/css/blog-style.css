@@ -1,0 +1,48 @@
+
+body {
+	display: grid;
+	grid-template-columns:50% 50%;
+	grid-template-rows: 400px 150px 300px 300px 100px;
+
+	grid-template-areas: "a a"
+						 "b b"
+						 "c d"
+						 "e f"
+						 "g g";
+	grid-gap: 20px;
+
+}
+
+header {
+	background: blue;
+	grid-area: a;
+}
+section#top {
+	grid-area: b;
+	background: orange;
+}
+
+section#first-left {
+	grid-area: c;
+	background: yellow;
+}
+
+section#first-right {
+	grid-area: d;
+	background: yellow;
+}
+
+section#second-left {
+	grid-area: e;
+	background: yellow;
+}
+
+section#second-right {
+	grid-area: f;
+	background: yellow;
+}
+
+footer {
+	grid-area: g;
+	background: green;
+}
