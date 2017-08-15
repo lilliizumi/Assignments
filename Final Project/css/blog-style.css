@@ -1,8 +1,29 @@
+/******************************************
+/* SETUP
+/*******************************************/
 
+* {
+
+  box-sizing: border-box; 
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+a {
+  text-decoration: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
 body {
 	display: grid;
 	grid-template-columns:50% 50%;
-	grid-template-rows: 400px 150px 300px 300px 100px;
+	grid-template-rows: 400px 150px 300px 300px 200px;
 
 	grid-template-areas: "a a"
 						 "b b"
@@ -10,39 +31,140 @@ body {
 						 "e f"
 						 "g g";
 	grid-gap: 20px;
+	font-size: 12px;
+	line-height: 1.4;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 300;
 
 }
 
+header.page-header { /* selects header elements that have the class name of page-header */
+  /*padding-top: 32px;*/
+  background: url('../images/blog-header.jpg') no-repeat top center;
+  background-size: cover;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 75px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header nav, header .logo{
+  width:40%;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+header nav ul li a:hover{
+  text-decoration: underline;
+}
+
 header {
-	background: blue;
 	grid-area: a;
 }
 section#top {
 	grid-area: b;
-	background: orange;
+	text-align: center;
 }
 
 section#first-left {
 	grid-area: c;
 	background: yellow;
+	margin: 30px;
 }
 
 section#first-right {
 	grid-area: d;
 	background: yellow;
+	margin: 30px;
 }
 
 section#second-left {
 	grid-area: e;
+	margin: 30px;
 	background: yellow;
 }
 
 section#second-right {
 	grid-area: f;
+	margin: 30px;
 	background: yellow;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
 footer {
 	grid-area: g;
-	background: green;
+	padding: 20px 0 20px;
+	background: rgba(242,244,246, 1);
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+footer .logo {
+	color: rgb(113,122,128);
+	margin: 20px;
+}
+
+footer p {
+	font-size: 9px;
+	color: rgb(113,122,128);
+	font-weight: 700;
+}
+
+footer nav {
+	display: inline-block;
+	justify-content: space-between;
+}
+
+footer nav ul {
+	display: flex;
+	list-style: none;
+}
+
+footer nav ul li a {
+	display: block;
+	padding: 10px 20px;
+	color: black;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+footer nav ul li a:hover{
+	text-decoration: underline;
+}
+
+footer nav div {
+	align-items: center;
+}
+
+.social-icons-container {
+	margin: 10px;
 }
