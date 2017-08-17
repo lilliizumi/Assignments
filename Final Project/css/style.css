@@ -26,10 +26,17 @@ a {
   text-decoration: none;
 }
 
+a.primary:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.5;
+}
+
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+
 
 h2 {
 
@@ -39,22 +46,6 @@ h2 {
   letter-spacing: 4px;
   text-shadow: black .25px .25px .25px
 
-}
-
-h4 {
-  color: #033048;
-  font-size: 15px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-
-.logo {
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 3px;
 }
 
 header.page-header { /* selects header elements that have the class name of page-header */
@@ -68,6 +59,15 @@ header.page-header { /* selects header elements that have the class name of page
   padding: 20px 75px;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
+}
+
+header div {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 header nav, header .logo{
@@ -100,11 +100,18 @@ header .logo {
 
 header h3 {
   font-size: 40px;
-  margin: 5px;
+  margin-bottom: 30px;
+  margin-top: 10px;
   color: #FFF;
   font-weight: 300;
   letter-spacing: 3px;
   text-shadow: black .25px .25px .25px
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
 .second-image {
@@ -113,9 +120,11 @@ header h3 {
   padding: 0;
 }
 
-.button {
+.shop-button {
   border-radius: 0px;
+  border: 1px solid white;
   font-weight: 300;
+  margin-top: 10px;
   padding: 15px 0;
   width: 200px;
   font-size: 12px;
@@ -123,6 +132,23 @@ header h3 {
   text-align: center;
   display: block;
   color:#fff;
+  margin: 0 auto;
+}
+
+.collection-button {
+  border-radius: 0px;
+  border: 1px solid white;
+  font-weight: 400;
+  padding: 15px 0;
+  width: 100px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-align: center;
+  color:#fff;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); /*moves it up half of the h4's own height, and to the left half of its own height */
 }
 
 .primary {
@@ -131,28 +157,58 @@ header h3 {
   margin-top:25px;
 }
 
-a.primary:hover {
-  background-color: white;
-  color: black;
-  opacity: 0.5;
+.secondary-image-container {
+  padding-top: 20px;
 }
 
-.secondary-image {
-  margin: 0 auto;
-  width: 100%;
-  z-index: 0;
+.secondary-image img {
+ display: block;
+ margin: 0 auto;
 }
 
-#services {
-  padding-top: 50px;
+#collections {
+  padding-top: 20px;
+  padding: bottom: 20px;
   display: flex;
   justify-content: space-around;
-  background:rgba(255,255,255,.9);
 }
 
-#services div {
+#collections div {
   width: 25%;
+  position: relative;
   text-align: center;
+}
+
+#third-images-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-images {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.black-bodysuit {
+  width: 40%;
+  position: relative;
+}
+
+.black-tank {
+  width: 40%;
+  position: relative;
+}
+
+.fourth-image-container {
+  padding-top: 20px;
+}
+
+.fourth-image img {
+ display: block;
+ margin: 0 auto;
 }
 
 #testimonial {
@@ -225,7 +281,10 @@ footer nav div {
   align-items: center;
 }
 
-.social-icons-container {
-  margin: 10px;
+.social-icons-container{
+    margin: 0 auto;  /* centers this icon container relative to its parent */
+    width: 100px;
+    display: flex;  /* allows us to easily space its children (the individual icons) */
+    justify-content: space-between;
 }
 

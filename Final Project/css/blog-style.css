@@ -85,34 +85,54 @@ header nav ul li a:hover{
 header {
 	grid-area: a;
 }
-section#top {
-	grid-area: b;
-	text-align: center;
+
+section#top{
+    display: flex;
+    grid-area: b;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section#first-left {
 	grid-area: c;
-	background: yellow;
 	margin: 30px;
 }
 
 section#first-right {
 	grid-area: d;
-	background: yellow;
 	margin: 30px;
 }
 
 section#second-left {
 	grid-area: e;
 	margin: 30px;
-	background: yellow;
 }
 
 section#second-right {
 	grid-area: f;
 	margin: 30px;
-	background: yellow;
 }
+
+section#first-left img {
+  display: block;
+  margin: 0 auto;
+ }
+
+section#first-right img {
+  display: block;
+  margin: 0 auto;
+ }
+
+ section#second-left img {
+  display: block;
+  margin: 0 auto;
+ }
+
+ section#second-right img {
+  display: block;
+  margin: 0 auto;
+ }
 
 .logo {
   font-size: 16px;
@@ -164,6 +184,9 @@ footer nav div {
 	align-items: center;
 }
 
-.social-icons-container {
-	margin: 10px;
+.social-icons-container{
+    margin: 0 auto;  /* centers this icon container relative to its parent */
+    width: 100px;
+    display: flex;  /* allows us to easily space its children (the individual icons) */
+    justify-content: space-between;
 }
