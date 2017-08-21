@@ -14,16 +14,64 @@
 
 a {
   text-decoration: none;
+  color: black;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+}
+li a .main-read-more {
+  text-decoration: none;
+}
+
+.hero-text ul {
+  padding: 0;
+}
+
+.hero-text ul li {
+  list-style-type: none;;
+}
+
+.hero-text ul li a {
+  color: black;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero-text ul li a:hover {
+  text-decoration: underline;
+}
+
+.hero-text-2 ul {
+  padding: 0;
+}
+
+.hero-text-2 ul li {
+  list-style-type: none;;
+}
+
+.hero-text-2 ul li a {
+  color: black;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero-text-2 ul li a:hover {
+  text-decoration: underline;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 body {
-	display: grid;
+	background: #fff;
+  display: grid;
 	grid-template-columns:50% 50%;
-	grid-template-rows: 400px 150px 300px 300px 200px;
+	grid-template-rows: 400px 150px 400px 500px 200px;
 
 	grid-template-areas: "a a"
 						 "b b"
@@ -78,7 +126,7 @@ header nav ul li a {
   text-decoration: none;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover {
   text-decoration: underline;
 }
 
@@ -86,12 +134,56 @@ header {
 	grid-area: a;
 }
 
-section#top{
+h3 {
+  letter-spacing: 2px;
+}
+
+section#hero-text-container {
     display: flex;
     grid-area: b;
     text-align: center;
     flex-direction: column;
     justify-content: center;
+}
+
+h2 {
+
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-shadow: black .25px .25px .25px
+
+}
+
+header h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: black .25px .25px .25px
+}
+
+header div {
+    top: 25%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text {
+    width: 40%;
+    align-self: center;
+    text-align: center
+}
+
+.hero-text-2 {
+    width: 100%;
+    align-self: center;
+    text-align: center
 }
 
 section#first-left {
@@ -117,6 +209,7 @@ section#second-right {
 section#first-left img {
   display: block;
   margin: 0 auto;
+
  }
 
 section#first-right img {

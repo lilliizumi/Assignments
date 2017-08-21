@@ -13,6 +13,10 @@
 /* BASE STYLES
 /*******************************************/
 
+#homepage {
+  position: relative;
+}
+
 body {
   background-color: #ffffff;
   color: #033048;
@@ -26,12 +30,17 @@ a {
   text-decoration: none;
 }
 
-a.primary:hover {
+a.shop-button:hover {
   background-color: white;
   color: black;
   opacity: 0.5;
 }
 
+a.collection-button:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.5;
+}
 
 /******************************************
 /* LAYOUT
@@ -159,6 +168,7 @@ header h3 {
 
 .secondary-image-container {
   padding-top: 20px;
+  position: absolute;
 }
 
 .secondary-image img {
@@ -183,6 +193,8 @@ header h3 {
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  background: #fff;
 }
 
 .third-images {
