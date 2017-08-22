@@ -282,13 +282,12 @@ body.blog aside img {
     text-align: center;
   }
 
-  header {
-    flex-direction: column;
-  }
 
   header.page-header {
     padding: 20px 20px;
     min-height: 0;
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu {
@@ -314,6 +313,7 @@ body.blog aside img {
     overflow: hidden;
     transition: 1s all;
     align-items: center;
+    justify-content: center;
   }
 
   header ul {

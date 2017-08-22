@@ -7,18 +7,18 @@ $("document").ready(function() {
 
 
   function readMore(){
-        $(this).parent().find("p.sub-blogs").slideDown(function(){
-        $(this).parent().find(".read-less").show();
-        $(this).parent().find(".read-more").hide();
+        $(this).parent().parent().find("p.sub-blogs").slideDown(function(){
+        $(this).parent().parent().find(".read-less").show();
+        $(this).parent().parent().find(".read-more").hide();
       });
  
   }
   
   
   function readLess(){
-      $(this).parent().find("p.sub-blogs").slideUp(function(){
-        $(this).parent().find(".read-more").show();
-        $(this).parent().find(".read-less").hide();
+      $(this).parent().parent().find("p.sub-blogs").slideUp(function(){
+        $(this).parent().parent().find(".read-more").show();
+        $(this).parent().parent().find(".read-less").hide();
       });
    
   
