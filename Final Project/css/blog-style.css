@@ -17,6 +17,10 @@ a {
   color: black;
 }
 
+header a:hover {
+  text-decoration: none;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -68,21 +72,22 @@ li a .main-read-more {
 /* LAYOUT
 /*******************************************/
 body {
-	background: #fff;
+  background: #fff;
   display: grid;
-	grid-template-columns:50% 50%;
-	grid-template-rows: 400px 150px 400px 500px 200px;
+  grid-template-columns:50% 50%;
+  grid-template-rows: 400px 150px 400px 500px 200px;
 
-	grid-template-areas: "a a"
-						 "b b"
-						 "c d"
-						 "e f"
-						 "g g";
-	grid-gap: 20px;
-	font-size: 12px;
-	line-height: 1.4;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-weight: 300;
+  grid-template-areas: "a a"
+             "b b"
+             "c d"
+             "e f"
+             "g g";
+  grid-gap: 20px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
 
 }
 
@@ -100,7 +105,7 @@ header.page-header { /* selects header elements that have the class name of page
 
 header nav, header .logo{
   width:40%;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 3px;
   color: white;
@@ -131,7 +136,7 @@ header nav ul li a:hover {
 }
 
 header {
-	grid-area: a;
+  grid-area: a;
 }
 
 h3 {
@@ -187,23 +192,23 @@ header div {
 }
 
 section#first-left {
-	grid-area: c;
-	margin: 30px;
+  grid-area: c;
+  margin: 30px;
 }
 
 section#first-right {
-	grid-area: d;
-	margin: 30px;
+  grid-area: d;
+  margin: 30px;
 }
 
 section#second-left {
-	grid-area: e;
-	margin: 30px;
+  grid-area: e;
+  margin: 30px;
 }
 
 section#second-right {
-	grid-area: f;
-	margin: 30px;
+  grid-area: f;
+  margin: 30px;
 }
 
 section#first-left img {
@@ -234,47 +239,47 @@ section#first-right img {
 }
 
 footer {
-	grid-area: g;
-	padding: 20px 0 20px;
-	background: rgba(242,244,246, 1);
-	text-align: center;
+  grid-area: g;
+  padding: 20px 0 20px;
+  background: rgba(242,244,246, 1);
+  text-align: center;
 }
 
 footer .logo {
-	color: rgb(113,122,128);
-	margin: 20px;
+  color: rgb(113,122,128);
+  margin: 20px;
 }
 
 footer p {
-	font-size: 9px;
-	color: rgb(113,122,128);
-	font-weight: 700;
+  font-size: 9px;
+  color: rgb(113,122,128);
+  font-weight: 700;
 }
 
 footer nav {
-	display: inline-block;
-	justify-content: space-between;
+  display: inline-block;
+  justify-content: space-between;
 }
 
 footer nav ul {
-	display: flex;
-	list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 footer nav ul li a {
-	display: block;
-	padding: 10px 20px;
-	color: black;
-	font-weight: 300;
-	letter-spacing: 1px;
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 footer nav ul li a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 footer nav div {
-	align-items: center;
+  align-items: center;
 }
 
 .social-icons-container{

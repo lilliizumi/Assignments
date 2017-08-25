@@ -118,7 +118,7 @@ header h3 {
 }
 
 .logo {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 3px;
 }
@@ -168,7 +168,6 @@ header h3 {
 
 .secondary-image-container {
   padding-top: 20px;
-  position: absolute;
 }
 
 .secondary-image img {
@@ -194,7 +193,6 @@ header h3 {
   display: flex;
   justify-content: space-between;
   position: relative;
-  background: #fff;
 }
 
 .third-images {
@@ -216,6 +214,8 @@ header h3 {
 
 .fourth-image-container {
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .fourth-image img {
@@ -299,4 +299,6 @@ footer nav div {
     display: flex;  /* allows us to easily space its children (the individual icons) */
     justify-content: space-between;
 }
+
+/*MOBILE*/
 

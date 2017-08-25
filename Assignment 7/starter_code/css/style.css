@@ -290,18 +290,18 @@ body.blog aside img {
     align-items: center;
   }
 
-  .menu {
+  #menu {
     display: block;
     color: white;
     font-weight: 700;
     text-align: right;
   }
 
-  #secondary.open {
+  #menu.open {
     max-height: 75vh;
   }
 
-  #primary {
+  .page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;

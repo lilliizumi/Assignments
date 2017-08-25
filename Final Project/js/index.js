@@ -3,7 +3,7 @@ $("document").ready(function() {
   $(".read-less").hide();
   $(".read-more").click(readMore);
   $(".read-less").click(readLess);
-  $("#blog").scroll(parallaxScroll);
+  $(window).scroll(parallaxScroll);
 
 
   function readMore(){
@@ -24,9 +24,15 @@ $("document").ready(function() {
   
   }
   
-  function parallaxScroll (){
-    s = $("@blog").scrollTop();
-    $("#blog img").css("-webkit-transform", "translateY(" + (s/3) + "px)");
+  function parallaxScroll(){
+    s = $(".blog").scrollTop();
+    $("header").css("background-position", "center " + (s/3) + "px");
+
+  }
+
+  function parallaxScroll(){
+    s = $(".homepage").scrollTop();
+    $("header").css("background-position", "center " + (s/3) + "px");
 
   }
 
