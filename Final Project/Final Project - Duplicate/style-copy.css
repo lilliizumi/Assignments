@@ -18,25 +18,12 @@
 }
 
 body {
-  background: #fff;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 600px 330px 580px 550px 900px 150px 200px;
-
-  grid-template-areas:  "a"
-                        "b"
-                        "c"
-                        "d"
-                        "e"
-                        "f"
-                        "g";
-  grid-gap: 10px;
+  background-color: #ffffff;
+  color: #033048;
   font-size: 12px;
   line-height: 1.4;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 0;
-
 }
 
 a {
@@ -82,7 +69,6 @@ header.page-header { /* selects header elements that have the class name of page
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  grid-area: a;
 }
 
 header div {
@@ -181,7 +167,6 @@ header h3 {
 }
 
 .secondary-image-container {
-  grid-area: c;
   padding-top: 20px;
 }
 
@@ -191,7 +176,6 @@ header h3 {
 }
 
 #collections {
-  grid-area: b;
   padding-top: 20px;
   padding: bottom: 20px;
   display: flex;
@@ -205,7 +189,6 @@ header h3 {
 }
 
 #third-images-container {
-  grid-area: d;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -230,7 +213,6 @@ header h3 {
 }
 
 .fourth-image-container {
-  grid-area: e;
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -242,7 +224,6 @@ header h3 {
 }
 
 #testimonial {
-  grid-area: f;
   padding: 40px 0 70px;
   color: rgb(142,149,146);
   letter-spacing: 2px;
@@ -271,7 +252,6 @@ blockquote cite {
 }
 
 footer {
-  grid-area: g;
   padding: 20px 0 20px;
   background: rgba(242,244,246, 1);
   text-align: center;
@@ -321,29 +301,4 @@ footer nav div {
 }
 
 /*MOBILE*/
-
-@media screen and (max-width: 780px){
-
-  body {
-    font-size: 1.5em;
-  }
-
-  body.homepage { 
-  display: grid;
-  grid-row-gap: 30px;
-  min-height: 100vh;
-  grid-template-columns: 100%;
-  grid-template-rows: minmax(300px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(75px, auto);
-  grid-template-areas: "a"
-                       "b" 
-                       "c"
-                       "d"
-                       "e"
-                       "f"
-                       "g"
-
-  }
-
-
-  }
 
