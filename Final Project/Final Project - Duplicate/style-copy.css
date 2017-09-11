@@ -17,15 +17,6 @@
   position: relative;
 }
 
-body {
-  background-color: #ffffff;
-  color: #033048;
-  font-size: 12px;
-  line-height: 1.4;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
 a {
   text-decoration: none;
 }
@@ -46,14 +37,25 @@ a.collection-button:hover {
 /* LAYOUT
 /*******************************************/
 
+body {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 600px 330px 580px 550px 900px 150px 200px;
 
-h2 {
-
-  font-size: 20px;
-  color: #FFF;
+  grid-template-areas:  "a"
+                        "b"
+                        "c"
+                        "d"
+                        "e"
+                        "f"
+                        "g";
+  grid-gap: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  letter-spacing: 4px;
-  text-shadow: black .25px .25px .25px
+  margin: 0;
 
 }
 
@@ -69,18 +71,18 @@ header.page-header { /* selects header elements that have the class name of page
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-}
-
-header div {
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  grid-area: a;
 }
 
 header nav, header .logo{
   width:40%;
+}
+
+.logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
 header nav {
@@ -103,11 +105,27 @@ header nav ul li a {
 header nav ul li a:hover{
   text-decoration: underline;
 }
-header .logo {
-  color: #fff;
+
+header .hero-text {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-header h3 {
+h2 {
+
+  font-size: 20px;
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-shadow: black .25px .25px .25px;
+  text-align: center;
+
+}
+
+header h1 {
   font-size: 40px;
   margin-bottom: 30px;
   margin-top: 10px;
@@ -115,12 +133,6 @@ header h3 {
   font-weight: 300;
   letter-spacing: 3px;
   text-shadow: black .25px .25px .25px
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 3px;
 }
 
 .second-image {
@@ -160,22 +172,8 @@ header h3 {
   transform: translate(-50%, -50%); /*moves it up half of the h4's own height, and to the left half of its own height */
 }
 
-.primary {
-  background: transparent;
-  border: 1px solid white;
-  margin-top:25px;
-}
-
-.secondary-image-container {
-  padding-top: 20px;
-}
-
-.secondary-image img {
- display: block;
- margin: 0 auto;
-}
-
 #collections {
+  grid-area: b;
   padding-top: 20px;
   padding: bottom: 20px;
   display: flex;
@@ -188,7 +186,28 @@ header h3 {
   text-align: center;
 }
 
+#collections div img {
+  width: 300px;
+  height: 300px;
+}
+
+.primary {
+  background: transparent;
+  margin-top:25px;
+}
+
+.secondary-image-container {
+  grid-area: c;
+  padding-top: 20px;
+}
+
+.secondary-image img {
+ display: block;
+ margin: 0 auto;
+}
+
 #third-images-container {
+  grid-area: d;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -213,6 +232,7 @@ header h3 {
 }
 
 .fourth-image-container {
+  grid-area: e;
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -224,6 +244,7 @@ header h3 {
 }
 
 #testimonial {
+  grid-area: f;
   padding: 40px 0 70px;
   color: rgb(142,149,146);
   letter-spacing: 2px;
@@ -252,6 +273,7 @@ blockquote cite {
 }
 
 footer {
+  grid-area: g;
   padding: 20px 0 20px;
   background: rgba(242,244,246, 1);
   text-align: center;
@@ -301,4 +323,135 @@ footer nav div {
 }
 
 /*MOBILE*/
+
+@media screen and (max-width: 780px){
+
+  body {
+    font-size: 1.5em;
+  }
+
+  body.homepage { 
+  display: grid;
+  grid-row-gap: 30px;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(300px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(75px, auto);
+  grid-template-areas: "a"
+                       "b" 
+                       "c"
+                       "d"
+                       "e"
+                       "f"
+                       "g"
+
+  }
+
+header.page-header {
+  grid-area: a;
+}
+
+header nav {
+  display: none; 
+  max-height: 0;
+  overflow:hidden;
+  transition: 1s all;
+}
+
+.menu {
+    display: block;
+}
+
+.menu {
+  padding:0px;
+  width:2em;
+  background:none;
+}
+
+.menu div {
+  height: 2px;
+  width:100%;
+  background:white;
+  margin: .25em 0;
+}
+
+.menu:hover {
+  cursor:pointer;
+}
+
+.primary {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.open{
+  max-height: 75vh;
+}
+
+.shop-button {
+  font-size: 1em;
+  width: 250px;
+}
+
+#collections {
+  grid-area: b;
+  flex-direction: column;
+}
+
+#collections div {
+  width: 100%;
+}
+
+#collections div img {
+  width: 100%;
+  height: auto;
+}
+
+.collection-button {
+  width: 200px;
+  font-size: 1em;
+}
+
+.secondary-image-container {
+  grid-area: c;
+}
+
+.secondary-image img {
+  width: 100%;
+  height: auto;
+}
+
+#third-images-container {
+  grid-area: d;
+}
+
+.third-images {
+  flex-direction: column;
+}
+
+.fourth-image-container {
+  grid-area: e;
+}
+
+.fourth-image img {
+  width: 100%;
+  height: auto;
+}
+
+#testimonial {
+  grid-area: f
+}
+
+footer {
+  grid-area: g;
+  font-size: .75em;
+}
+
+footer nav ul {
+  flex-direction: column;
+  padding-left: 0;
+}
+
+}
 

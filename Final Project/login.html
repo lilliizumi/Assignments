@@ -16,52 +16,39 @@
   </head>
   <body class="login">
     <header class="page-header">
+      <div class="primary">
         <a class="logo" href="index.html">HOLE HEART</a>
-        <nav>
+        <div class="menu"><div></div><div></div><div></div><div></div></div>
+      </div>
+        <nav class="secondary">
           <ul>
             <li><a href="#">SHOP</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="blog.html">BLOG</a></li>
-            <li><a href="#">LOG IN</a></li>
+            <li><a href="login.html">LOG IN</a></li>
           </ul>
         </nav>
-        <div>
-          <h2>ACCOUNT</h2>
-          <h3></h3>
-          <a class="login-button" href="#">LOG IN</a>
-          <a class="register-button" href="#">REGISTER</a>
+        <div class="hero-text">
+          <h2>REGISTER</h2>
+          <h1>YOUR ACCOUNT</h1>
         </div>
         
     </header>
-<section id="form">
-  <form enctype="multipart/form-data" method="POST">
-    <label for="name">First Name</label><input placeholder="First Name" name="text" id="first name" type="text">
-    <label for="text">Last Name</label><input placeholder="Last Name" name="name" id="last name" type="text">
-    <label for="email">Email</label><input placeholder="Email Address" name="email" type="email" id="email">
-    <label for="tel">Phone</label><input placeholder="(_ _ _) _ _ _-_ _ _ _" type="tel" id="tel">
-    <label for="file">Resume:</label>
-    <input type="file" name="file" id="file">
+<section id="form-container">
+  <form class="register">
+    <label for="name">FIRST NAME</label><input placeholder="First Name" name="text" id="first name" type="text">
+    <label for="text">LAST NAME</label><input placeholder="Last Name" name="name" id="last name" type="text">
+    <label for="email">EMAIL</label><input placeholder="Email Address" name="email" type="email" id="email">
+    <label for="tel">PHONE</label><input placeholder="(_ _ _) _ _ _-_ _ _ _" type="tel" id="tel">
+    <label for="password">PASSWORD:</label>
+    <input type="password" name="password" id="password">
     
-    <div id="gender">
-    <input name="gender" type="radio" id="male">
-      <label for="male">Male</label>
-    <input name="gender" type="radio" id="female">
-      <label for="female">Female</label>
-    <input name="gender" type="radio" id="other">
-      <label for="other">Other</label>
+    <div id="terms">
+    <input name="terms" type="radio" id="terms">
+      <label for="terms">I AGREE TO THE TERMS</label>
     </div>
     
-     <div id="services">
-    <input name="service" type="checkbox" id="html">
-      <label for="html">HTML</label>
-    <input name="service" type="checkbox" id="css">
-      <label for="css">CSS</label>
-    <input name="service" type="checkbox" id="js">
-      <label for="js">JS</label>
-    </div>
-    
-    
-   <input type="submit" value="Apply Now">
+   <input type="submit" value="REGISTER">
   </form>
 </section>
 

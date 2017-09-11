@@ -5,7 +5,6 @@ $("document").ready(function() {
   $(".read-less").click(readLess);
   $(window).scroll(parallaxScroll);
 
-
   function readMore(){
         $(this).parent().parent().find("p.sub-blogs").slideDown(function(){
         $(this).parent().parent().find(".read-less").show();
@@ -21,27 +20,16 @@ $("document").ready(function() {
         $(this).parent().parent().find(".read-less").hide();
       });
    
-  
   }
-  
 
+  $(".menu").click(function(){
+      $("nav").toggleClass("open");
+  });
+  
   function parallaxScroll(){
     s = $("body").scrollTop();
     $("header").css("background-position", "center " + (s/3) + "px");
 
-    //   s = $(".blog").scrollTop();
-    // $("header").css("background-position", "center " + (s/3) + "px");
-
   }
 
-  //   function parallaxScroll(){
-  //   s = $(".blog").scrollTop();
-  //   $("header").css("background-position", "center " + (s/3) + "px");
-
-  // }
-
-  $(".menu").click(function(){
-  $("nav").toggleClass("open");
-  })
-
-  });
+});
